@@ -14,15 +14,13 @@ import java.util.Scanner;
 
 
 /*
-notes:
-- create program determining years till retirement and the year you can retire
-- computer already has year
+- use calendar to get current year
 - ask for age
 - ask what age to retire
 - convert those strings to years.
-- do subtraction for it
-"You have %d years left until you can retire
-- its %d year, so you can retire in %d
+- use getYears method to do subtraction for years until retirement
+- add that value to the current year to get the year you retire
+- print how many years and in what year you retire
  */
 
 
@@ -32,6 +30,7 @@ public class Solution06 {
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
+        getYearsTillRetirement getYears = new getYearsTillRetirement();
 
         Calendar cal = Calendar.getInstance();
         int currentYear = cal.get(Calendar.YEAR);
@@ -44,7 +43,8 @@ public class Solution06 {
         String str2 = input.nextLine();
         int retireAge = Integer.parseInt(str2);
 
-        int yearsTillRetire = retireAge - currentAge;
+        //int yearsTillRetire = retireAge - currentAge;
+        int yearsTillRetire = getYears.math(retireAge, currentAge);
         int yearOfRetire = currentYear + yearsTillRetire;
 
 
