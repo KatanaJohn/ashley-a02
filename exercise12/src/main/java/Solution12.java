@@ -7,10 +7,19 @@ import java.util.Scanner;
 
 public class Solution12 {
 
+    private static final Scanner input = new Scanner(System.in);
+
+    public static double calculation(int principal, double interest, int years)
+    {
+        double total;
+        interest = interest / 100.0;
+        total = Math.ceil(principal * (1+ interest * years) * 100) / 100;
+
+        return total;
+    }
+
     public static void main(String[] args)
     {
-        Scanner input = new Scanner(System.in);
-        InterestConversion simpleInterest = new InterestConversion();
 
 
         System.out.print("Enter the principal: ");
@@ -23,7 +32,7 @@ public class Solution12 {
         System.out.print("Enter the number of years: ");
         int years = input.nextInt();
 
-        double investmentWorth = simpleInterest.calculation(principal, interest, years);
+        double investmentWorth = calculation(principal, interest, years);
 
         System.out.print("After " + years + " years at " + interest + "%, the investment will be worth $" + investmentWorth);
 

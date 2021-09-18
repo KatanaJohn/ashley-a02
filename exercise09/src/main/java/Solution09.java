@@ -3,6 +3,7 @@
  *  Copyright 2021 John Ashley
  */
 
+
 import java.util.Scanner;
 
 /*
@@ -14,24 +15,45 @@ import java.util.Scanner;
  */
 
 
+
+
+
+
 public class Solution09 {
+
+
+    private static final Scanner input = new Scanner(System.in);
+
+
+    public static int getLength()
+    {
+        System.out.println("What is the length?");
+        String str = input.nextLine();
+        return Integer.parseInt(str);
+    }
+
+
+    public static int getWidth()
+    {
+        System.out.println("What is the width?");
+        String str = input.nextLine();
+        return Integer.parseInt(str);
+    }
+
 
     public static void main(String[] args)
     {
+
         double gallonConstant = 350;
 
-        Scanner input = new Scanner(System.in);
 
-        System.out.print("What is the length? ");
-        String str1 = input.nextLine();
-        int length = Integer.parseInt(str1);
 
-        System.out.print("What is the width? ");
-        String str2 = input.nextLine();
-        int width = Integer.parseInt(str2);
+        int length = getLength();
+        int width = getWidth();
 
         int squareFeet = length * width;
         int gallonsRequired = (int) Math.ceil(squareFeet / gallonConstant);
+
         System.out.print("You will need to purchase " + gallonsRequired + " gallons of paint to cover " + squareFeet + " square feet.");
 
 
