@@ -1,4 +1,4 @@
-
+package exercise08;
 
 /*
  *  UCF COP3330 Fall 2021 Assignment 2 Solution
@@ -18,7 +18,7 @@ display slices per person and leftover slices
 
 
 
-package exercise08;
+
 import java.util.Scanner;
 
 

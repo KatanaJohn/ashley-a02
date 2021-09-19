@@ -1,3 +1,5 @@
+package exercise06;
+
 /*
  *  UCF COP3330 Fall 2021 Assignment 2 Solution
  *  Copyright 2021 John Ashley
@@ -27,10 +29,15 @@ import java.util.Scanner;
 
 public class Solution06 {
 
+
+    public static int math(int retireAge, int currentAge)
+    {
+        return(retireAge - currentAge);
+    }
+
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
-        getYearsTillRetirement getYears = new getYearsTillRetirement();
 
         Calendar cal = Calendar.getInstance();
         int currentYear = cal.get(Calendar.YEAR);
@@ -43,8 +50,7 @@ public class Solution06 {
         String str2 = input.nextLine();
         int retireAge = Integer.parseInt(str2);
 
-        //int yearsTillRetire = retireAge - currentAge;
-        int yearsTillRetire = getYears.math(retireAge, currentAge);
+        int yearsTillRetire = math(retireAge, currentAge);
         int yearOfRetire = currentYear + yearsTillRetire;
 
 
