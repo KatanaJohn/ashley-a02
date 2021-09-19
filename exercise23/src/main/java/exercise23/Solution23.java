@@ -1,3 +1,6 @@
+package exercise23;
+
+
 /*
  *  UCF COP3330 Fall 2021 Assignment 2 Solution
  *  Copyright 2021 John Ashley
@@ -32,6 +35,8 @@ public class Solution23 {
     {
         Scanner input = new Scanner(System.in);
         String userInput;
+
+
 
         System.out.println("Is the car silent when you turn the key? (input y or n)");
         userInput = input.nextLine();
